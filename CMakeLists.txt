@@ -21,12 +21,13 @@ set(HEADERS
 )
 
 set(UIS
-    registration/registration.ui
+    registration/registrationwindow.ui
 )
 
 add_executable(${PROJECT_NAME}
     ${SOURCES}
     ${HEADERS}
+    ${UIS}
 )
 
 target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
