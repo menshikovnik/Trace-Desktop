@@ -1,5 +1,0 @@
-/Users/nikmenshikov/Documents/Trace-Messenger/Trace-Desktop/build/CMakeFiles/Trace-Desktop.dir
-/Users/nikmenshikov/Documents/Trace-Messenger/Trace-Desktop/build/CMakeFiles/edit_cache.dir
-/Users/nikmenshikov/Documents/Trace-Messenger/Trace-Desktop/build/CMakeFiles/rebuild_cache.dir
-/Users/nikmenshikov/Documents/Trace-Messenger/Trace-Desktop/build/CMakeFiles/Trace-Desktop_autogen_timestamp_deps.dir
-/Users/nikmenshikov/Documents/Trace-Messenger/Trace-Desktop/build/CMakeFiles/Trace-Desktop_autogen.dir
