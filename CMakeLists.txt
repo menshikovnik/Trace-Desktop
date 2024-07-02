@@ -5,7 +5,7 @@ project(Trace-Desktop VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 COMPONENTS Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Widgets Network REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -30,7 +30,7 @@ add_executable(${PROJECT_NAME}
     ${UIS}
 )
 
-target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::Network)
 
 target_sources(Trace-Desktop
   PRIVATE
