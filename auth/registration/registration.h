@@ -17,8 +17,11 @@ class RegistrationWindow : public QDialog
     Q_OBJECT
 
 public:
-    RegistrationWindow(QWidget* parent = nullptr);
+    explicit RegistrationWindow(QWidget *parent = nullptr);
     ~RegistrationWindow();
+
+signals:
+    void log_in_button_clicked();
 
 private slots:
     void on_sign_up_button_clicked();

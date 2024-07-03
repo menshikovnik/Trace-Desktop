@@ -4,7 +4,6 @@
 #include <QDialog>
 #include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QNetworkAccessManager>
-#include "registration.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -18,8 +17,11 @@ class LogInWindow : public QDialog
     Q_OBJECT
 
 public:
-    LogInWindow(QWidget* parent = nullptr);
+     explicit LogInWindow(QWidget *parent = nullptr);
     ~LogInWindow();
+
+signals:
+    void sign_up_button_clicked();
 
 private slots:
     void on_log_in_button_clicked();
@@ -28,7 +30,6 @@ private slots:
 private:
     Ui::LogInWindow *ui;
     QNetworkAccessManager *networkManager;
-    RegistrationWindow *registration_window = nullptr;
 };
 
 #endif // LOG_IN_H

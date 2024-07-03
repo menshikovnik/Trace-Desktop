@@ -1,5 +1,4 @@
 #include "registration.h"
-#include "log_in.h"
 #include "ui_registration_window.h"
 #include <QMessageBox>
 #include <QtNetwork/QNetworkAccessManager>
@@ -21,7 +20,8 @@ RegistrationWindow::~RegistrationWindow() {
     delete ui;
 }
 
-void RegistrationWindow::on_sign_up_button_clicked() {
+void RegistrationWindow::on_sign_up_button_clicked()
+{
     QString username = ui->login_input_field->text();
     QString password = ui->password_input_field->text();
 
@@ -59,7 +59,5 @@ void RegistrationWindow::onNetworkReply(QNetworkReply *reply)
 
 void RegistrationWindow::on_log_in_button_clicked()
 {
-    LogInWindow log_in_window;
-    log_in_window.show();
-    this->close();
+   emit log_in_button_clicked();
 }
