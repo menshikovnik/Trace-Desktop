@@ -1,9 +1,9 @@
 #include <QApplication>
-#include "registration/registration.h"
+#include "log-in/log_in.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    RegistrationWindow w;
+    LogInWindow w;
     w.show();
     return a.exec();
 }

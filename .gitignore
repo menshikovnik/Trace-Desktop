@@ -56,5 +56,5 @@ compile_commands.json
 build/
 *.txt.user
 .*.autosave
-*.ui
 *.txt.user
+.DS_Store
