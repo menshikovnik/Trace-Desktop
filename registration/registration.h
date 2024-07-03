@@ -21,6 +21,7 @@ public:
     ~RegistrationWindow();
 
 private slots:
+    void on_sign_up_button_clicked();
     void on_log_in_button_clicked();
     void onNetworkReply(QNetworkReply *reply);
 

@@ -11,17 +11,25 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
+include_directories(
+    ${CMAKE_SOURCE_DIR}/log-in
+    ${CMAKE_SOURCE_DIR}/registration
+)
+
 set(SOURCES
     main.cpp
     registration/registration.cpp
+    log-in/log_in.cpp
 )
 
 set(HEADERS
     registration/registration.h
+    log-in/log_in.h
 )
 
 set(UIS
-    registration/registrationwindow.ui
+    registration/registration_window.ui
+    log-in/log_in_window.ui
 )
 
 add_executable(${PROJECT_NAME}
