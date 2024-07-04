@@ -1,7 +1,5 @@
 #ifndef AUTH_H
 #define AUTH_H
-#include "log-in/log_in.h"
-#include "registration/registration.h"
 #include "QObject"
 
 class LogInWindow;

@@ -24,12 +24,6 @@ set(SOURCES
     auth/log-in/log_in.cpp
 )
 
-set(HEADERS
-    auth/auth.h
-    auth/registration/registration.h
-    auth/log-in/log_in.h
-)
-
 set(UIS
     auth/registration/registration_window.ui
     auth/log-in/log_in_window.ui
