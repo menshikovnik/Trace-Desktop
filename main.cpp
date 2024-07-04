@@ -1,9 +1,9 @@
 #include <QApplication>
-#include "log-in/log_in.h"
+#include "auth/auth.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    LogInWindow w;
-    w.show();
+    Auth auth_manager;
+    auth_manager.show_log_in_window();
     return a.exec();
 }
