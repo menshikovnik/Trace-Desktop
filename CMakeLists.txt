@@ -12,33 +12,29 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/auth
-    ${CMAKE_SOURCE_DIR}/auth/log-in
-    ${CMAKE_SOURCE_DIR}/auth/registration
+        ${CMAKE_SOURCE_DIR}/auth
+        ${CMAKE_SOURCE_DIR}/auth/log-in
+        ${CMAKE_SOURCE_DIR}/auth/registration
 )
 
 set(SOURCES
-    main.cpp
-    auth/auth.cpp
-    auth/registration/registration.cpp
-    auth/log-in/log_in.cpp
+        main.cpp
+        auth/auth.cpp
+        auth/registration/registration.cpp
+        auth/log-in/log_in.cpp
+        auth/log-in/log_in_window.ui
+        auth/registration/registration_window.ui
 )
 
-set(UIS
-    auth/registration/registration_window.ui
-    auth/log-in/log_in_window.ui
-)
-
-add_executable(${PROJECT_NAME}
-    ${SOURCES}
-    ${HEADERS}
-    ${UIS}
-    auth/auth.h auth/auth.cpp
+add_executable(
+        ${PROJECT_NAME}
+        ${SOURCES}
+        ${HEADERS}
 )
 
 target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::Network)
 
 target_sources(Trace-Desktop
-  PRIVATE
-    .gitignore
+        PRIVATE
+        .gitignore
 )

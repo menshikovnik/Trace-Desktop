@@ -1,19 +1,20 @@
 #include "registration.h"
-#include "ui_registration_window.h"
+#include "./ui_registration_window.h"
 #include <QMessageBox>
 #include <QtNetwork/QNetworkAccessManager>
 #include <QJsonObject>
 #include <QJsonDocument>
-#include <QByteArray>
-#include <QUrl>
 
 RegistrationWindow::RegistrationWindow(QWidget *parent)
     : QDialog(parent), ui(new Ui::RegistrationWindow), networkManager(new QNetworkAccessManager(this)) {
     ui->setupUi(this);
 
-    connect(ui->sign_up_button, &QPushButton::clicked, this, &RegistrationWindow::on_sign_up_button_clicked);
-    connect(networkManager, &QNetworkAccessManager::finished, this, &RegistrationWindow::onNetworkReply);
-    connect(ui->log_in_button, &QPushButton::clicked, this, &RegistrationWindow::on_log_in_button_clicked);
+    [[maybe_unused]] auto sign_up_conn= connect(ui->sign_up_button, &QPushButton::clicked, this,
+                                         &RegistrationWindow::on_sign_up_button_clicked);
+    [[maybe_unused]] auto on_network_reply_conn = connect(networkManager, &QNetworkAccessManager::finished, this,
+                                                          &RegistrationWindow::onNetworkReply);
+    [[maybe_unused]] auto log_in_conn = connect(ui->log_in_button, &QPushButton::clicked, this,
+                                                &RegistrationWindow::on_log_in_button_clicked);
 }
 
 RegistrationWindow::~RegistrationWindow() {

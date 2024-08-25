@@ -6,7 +6,7 @@ Auth::Auth()
 {
     log_in_window = new LogInWindow();
     registration_window = nullptr;
-    connect(log_in_window, &LogInWindow::sign_up_button_clicked, this,  &Auth::show_registration_window);
+    connect(log_in_window, &LogInWindow::sign_up_button_clicked, this, &Auth::show_registration_window);
 }
 
 void Auth::show_log_in_window()

@@ -54,6 +54,7 @@ compile_commands.json
 *_qmlcache.qrc
 
 build/
+.idea/
 *.txt.user
 .*.autosave
 *.txt.user

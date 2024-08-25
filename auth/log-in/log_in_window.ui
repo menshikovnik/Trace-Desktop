@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LogIn</class>
- <widget class="QDialog" name="LogIn">
+ <class>LogInWindow</class>
+ <widget class="QDialog" name="LogInWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -129,7 +129,7 @@ QLineEdit:focus {
 }</string>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Password</string>
