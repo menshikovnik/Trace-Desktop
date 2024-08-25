@@ -11,8 +11,11 @@ class Auth : public QObject
 
 public:
     Auth();
+
+    void show_log_in_window() const;
+
     void show_registration_window();
-    void show_log_in_window();
+
 
 private:
     LogInWindow *log_in_window;

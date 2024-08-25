@@ -1,0 +1,17 @@
+//
+// Created by Nik Menshikov on 25.08.2024.
+//
+
+#ifndef CONFIG_UTILS_H
+#define CONFIG_UTILS_H
+#pragma once
+#include <boost/property_tree/ptree_fwd.hpp>
+#include <QtCore/QString>
+
+namespace config
+{
+    boost::property_tree::ptree load_config(const std::string &filename);
+    QString get_server_url(const std::string &filename);
+}
+
+#endif //CONFIG_UTILS_H

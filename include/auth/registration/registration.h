@@ -18,7 +18,7 @@ class RegistrationWindow : public QDialog
 
 public:
     explicit RegistrationWindow(QWidget *parent = nullptr);
-    ~RegistrationWindow();
+    ~RegistrationWindow() override;
 
 signals:
     void log_in_button_clicked();

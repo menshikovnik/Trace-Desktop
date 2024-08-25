@@ -6,24 +6,30 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 COMPONENTS Widgets Network REQUIRED)
+find_package(Boost 1.86.0 REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-include_directories(
-        ${CMAKE_SOURCE_DIR}/auth
-        ${CMAKE_SOURCE_DIR}/auth/log-in
-        ${CMAKE_SOURCE_DIR}/auth/registration
-)
+set(CMAKE_AUTOUIC_SEARCH_PATHS ui_forms)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+include_directories(${Boost_INCLUDE_DIRS})
 
 set(SOURCES
         main.cpp
-        auth/auth.cpp
-        auth/registration/registration.cpp
-        auth/log-in/log_in.cpp
-        auth/log-in/log_in_window.ui
-        auth/registration/registration_window.ui
+        src/auth/auth.cpp
+        src/auth/registration/registration.cpp
+        src/auth/log-in/log_in.cpp
+        ui_forms/log_in_window.ui
+        ui_forms/registration_window.ui
+        include/auth/registration/registration.h
+        include/auth/log-in/log_in.h
+        include/auth/auth.h
+        utils/config_utils.cpp
+        include/utils/config_utils.h
 )
 
 add_executable(
@@ -32,7 +38,7 @@ add_executable(
         ${HEADERS}
 )
 
-target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::Network)
+target_link_libraries(${PROJECT_NAME} ${Boost_INCLUDE_DIRS} Qt6::Widgets Qt6::Network)
 
 target_sources(Trace-Desktop
         PRIVATE
