@@ -78,6 +78,7 @@ jobs:
       run: |
         cmake -B ${{ steps.strings.outputs.build-output-dir }} -S . -DCMAKE_PREFIX_PATH="C:/Qt/6.2.3/msvc2019_64/lib/cmake/Qt6" -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
 
+
     - name: Build
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }}
 
