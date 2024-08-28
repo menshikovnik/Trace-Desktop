@@ -7,6 +7,7 @@
 #include <boost/property_tree/ini_parser.hpp>
 #include <boost/property_tree/ptree.hpp>
 #include <QtCore/QString>
+#include <QFile>
 
 boost::property_tree::ptree config::load_config(const std::string &filename)
 {
@@ -26,3 +27,13 @@ QString config::get_server_url(const std::string &filename)
     return QString::fromStdString(server_url);
 }
 
+
+void config::load_styles(QMessageBox &message_box, const std::string &filename) {
+    const std::string file_path = "resources/styles/" + filename;
+    if (QFile file(QString::fromStdString(file_path)); file.open(QFile::ReadOnly)) {
+        const QString style_sheet = file.readAll();
+        message_box.setStyleSheet(style_sheet);
+    } else {
+        qDebug() << "Cannot open style file.";
+    }
+}

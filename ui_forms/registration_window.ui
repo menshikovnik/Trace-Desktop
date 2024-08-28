@@ -26,7 +26,7 @@
    <string>Trace</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">backdrop-filter: blur(10px);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="registration_widget" native="true">
    <property name="geometry">
@@ -54,7 +54,6 @@
 	height: 520px;
 	width: 400px;
 	background-color: rgb(40, 39, 46);
-	transform: translate(-50%,-50%);
 	position: absolute;
 }</string>
    </property>
@@ -129,7 +128,7 @@ QLineEdit:focus {
 }</string>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Password</string>
@@ -149,6 +148,7 @@ QLineEdit:focus {
       <family>Poppins</family>
       <pointsize>-1</pointsize>
       <kerning>true</kerning>
+      <fontweight>Medium</fontweight>
      </font>
     </property>
     <property name="styleSheet">
@@ -178,6 +178,7 @@ QLineEdit:focus {
      <font>
       <family>Poppins</family>
       <pointsize>-1</pointsize>
+      <fontweight>Medium</fontweight>
      </font>
     </property>
     <property name="styleSheet">
@@ -336,7 +337,7 @@ QLineEdit:focus {
 }</string>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
     <property name="placeholderText">
      <string>Repeat your password</string>

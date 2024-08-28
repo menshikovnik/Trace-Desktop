@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/font">
+        <file>resources/fonts/Poppins-Regular.ttf</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>resources/icons/menu-btn.svg</file>
+    </qresource>
+</RCC>

@@ -30,12 +30,19 @@ set(SOURCES
         include/auth/auth.h
         utils/config_utils.cpp
         include/utils/config_utils.h
+        ui_forms/chats_window.ui
+        include/chats/chats_window.h
+        src/chats/chats_window.cpp
 )
+
+set(RESOURCE_FILES resources.qrc)
+
 
 add_executable(
         ${PROJECT_NAME}
         ${SOURCES}
         ${HEADERS}
+        ${RESOURCE_FILES}
 )
 
 target_link_libraries(${PROJECT_NAME} ${Boost_INCLUDE_DIRS} Qt6::Widgets Qt6::Network)

@@ -26,7 +26,7 @@
    <string>Trace</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">backdrop-filter: blur(10px);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="registration_widget" native="true">
    <property name="geometry">
@@ -54,7 +54,6 @@
 	height: 520px;
 	width: 400px;
 	background-color: rgb(40, 39, 46);
-	transform: translate(-50%,-50%);
 	position: absolute;
 }</string>
    </property>

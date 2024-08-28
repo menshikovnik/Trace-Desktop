@@ -14,7 +14,7 @@ public:
 
     void show_log_in_window() const;
 
-    void show_registration_window();
+    void show_registration_window() const;
 
 
 private:
