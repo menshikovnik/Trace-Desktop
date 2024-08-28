@@ -13,7 +13,7 @@ class ChatsWindow : public QMainWindow
 
 public:
     explicit ChatsWindow(QWidget *parent = nullptr);
-    ~ChatsWindow();
+    ~ChatsWindow() override;
 
 private:
     Ui::ChatsWindow *ui;

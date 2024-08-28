@@ -1,6 +1,6 @@
 QMessageBox {
-    background-color: rgb(40, 39, 46);;
-    border: 2px solid rgb(40, 39, 46);;
+    background-color: rgb(40, 39, 46);
+    border: 2px solid rgb(40, 39, 46);
     border-radius: 10px;
 }
 QLabel {
