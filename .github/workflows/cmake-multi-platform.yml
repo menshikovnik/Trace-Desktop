@@ -47,19 +47,19 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y qt6-base-dev qt6-tools-dev qt6-tools-dev-tools build-essential libgl1-mesa-dev
+        sudo apt-get install -y qt6-base-dev qt6-tools-dev qt6-tools-dev-tools build-essential libgl1-mesa-dev libboost1.86-dev
 
     - name: Install dependencies on macOS
       if: matrix.os == 'macos-latest'
       run: |
-        brew install qt
+        brew install qt boost
         echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bash_profile
         source ~/.bash_profile
 
     - name: Install dependencies on Windows
       if: matrix.os == 'windows-latest'
       run: |
-        choco install qt6-sdk
+        choco install qt6-sdk boost-msvc-14.2 --version=1.86.0
         setx Qt6_DIR "C:\Qt\6.2.3\msvc2019_64\lib\cmake\Qt6"
         setx PATH "%PATH%;C:\Qt\6.2.3\msvc2019_64\bin"
 
